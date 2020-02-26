@@ -9,7 +9,11 @@ const listaCitas = props => {
 
         <div className="lista-citas">
           {props.citas.map(cita => (
-            <Cita key={cita.id} cita={cita}></Cita>
+            <Cita
+              key={cita.id}
+              cita={cita}
+              eliminarCita={() => props.eliminarCita(cita.id)}
+            ></Cita>
           ))}
         </div>
       </div>

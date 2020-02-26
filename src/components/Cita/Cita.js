@@ -18,6 +18,12 @@ const cita = props => {
           <span>Sintomas:</span>
         </p>
         <p>{props.cita.sintomas} </p>
+        <button
+          className="btn btn-danger"
+          onClick={() => props.eliminarCita(props.cita.id)}
+        >
+          Borrar cita &times;
+        </button>
       </div>
     </div>
   );
