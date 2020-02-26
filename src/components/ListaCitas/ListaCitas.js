@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const listaCitas = props => {
   const mensaje =
     Object.keys(props.citas).length === 0
-      ? "no hay na compare"
+      ? "Sin citas Registradas"
       : "Administrar citas";
 
   return (
