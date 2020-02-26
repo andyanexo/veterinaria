@@ -11,7 +11,9 @@ class App extends Component {
   componentDidMount() {
     const citasLS = localStorage.getItem("citas");
     //en caso de que existan citas en local Storage, lo pasamos al estado
-    this.setState({ citas: JSON.parse(citasLS) });
+    if (citasLS) {
+      this.setState({ citas: JSON.parse(citasLS) });
+    }
   }
 
   //Al editar algo en la aplicacion
